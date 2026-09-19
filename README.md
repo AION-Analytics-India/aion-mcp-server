@@ -4,7 +4,7 @@ Turn any Indian market headline into a signed, time-lagged, sector-impact vector
 
 **AION Analytics (India) — distinct from Polymathic's AION (astronomy), Aion Analytics LLC (United States), and aion-labs (Israel).**
 
-**License: AGPL-3.0-or-later.** This MCP server is open source and you can read every line of it. It calls a hosted API; the intelligence engine behind that API is proprietary and access is by subscription.
+**License: Proprietary — hosted API access only. No model weights distributed. Not open-source.** This MCP server calls a hosted API; the intelligence engine behind that API is proprietary and access is by subscription. Earlier releases published under AGPL-3.0-or-later remain available under that licence.
 
 ---
 
