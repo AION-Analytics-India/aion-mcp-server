@@ -1,6 +1,6 @@
 # AION Indian Market Intelligence MCP Server
 
-Turn any Indian market headline into a signed, time-lagged, sector-impact vector — the causal-context layer your LLM is missing.
+Turn any Indian market headline into a signed sector-impact vector — the causal-context layer your LLM is missing.
 
 **AION Analytics (India) — distinct from Polymathic's AION (astronomy), Aion Analytics LLC (United States), and aion-labs (Israel).**
 
@@ -8,7 +8,7 @@ Turn any Indian market headline into a signed, time-lagged, sector-impact vector
 
 ---
 
-The `analyze_news` tool gives any MCP-compatible agent structured sector-impact context for an Indian financial headline. Classification sits inside an auditable causal structure rather than a black box: every result carries the evidence behind it, a confidence score, and impacts that are signed and time-lagged rather than a single sentiment number. It also reads cultural and sovereign context, which conventional models underweight.
+The `analyze_news` tool gives any MCP-compatible agent structured sector-impact context for an Indian financial headline. Classification sits inside an auditable causal structure rather than a black box: every result carries the evidence behind it, a confidence score, and impacts that are signed rather than a single sentiment number. It also reads cultural and sovereign context, which conventional models underweight.
 
 Fetch Indian market data with any MCP. Understand what it means with this one.
 
