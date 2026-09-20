@@ -10,9 +10,9 @@ MCP server wrapper for AION Indian Market Intelligence.
 
 ---
 
-The `analyze_news` MCP tool sends one Indian financial headline to the hosted AION API and returns the public API response. This package does not bundle a local engine, model weights, taxonomy files, rule files, or private inference logic.
+The `analyze_news` MCP tool sends one Indian financial headline to the hosted AION API and returns the `sector_vector` from the API response: a signed impact for each sector. This package does not bundle a local engine, model weights, taxonomy files, rule files, or private inference logic.
 
-Use it when an MCP-compatible agent already has a headline from another source and needs structured Indian market context: event metadata, confidence, market context, `sector_vector`, sector exposure summaries, stakeholder views, and assignment metadata when available.
+Use it when an MCP-compatible agent already has a headline from another source and needs to know which Indian market sectors an event is likely to move, and in which direction. The full API response (which also carries a confidence score and further context) is available through the REST API and the Python client; see the API reference linked below.
 
 ## Install
 
@@ -35,7 +35,7 @@ aion-indian-market-intelligence-mcp
 export AION_API_KEY="<your_api_key>"
 ```
 
-Register at: `https://dashboard.aiondashboard.site/access/register`
+Hosted API keys are issued with a plan, including a free plan. Choose one at: `https://aionanalytics.in/subscribe/indian-market-intelligence` (the page lists the current limits).
 
 ## Claude Desktop
 
@@ -59,40 +59,29 @@ Register at: `https://dashboard.aiondashboard.site/access/register`
 
 ```json
 {
-  "headline": "RBI MPC holds repo rate at 6.50% — June 2026",
+  "headline": "RBI hikes repo rate by 25 bps",
   "published_at": "2026-06-05T10:00:00+05:30"
 }
 ```
 
-**Output shape:**
+**Output:** the tool returns one field, `sector_vector`, mapping each of the 32 AION taxonomy sectors to a signed impact. The example is abbreviated: a real response lists all 32 sectors, and sectors with no modelled impact are `0.0`. Values below are from a real response to the headline above.
 
 ```json
 {
-  "headline": "RBI MPC holds repo rate at 6.50% — June 2026",
-  "event": "monetary_policy",
-  "confidence": 0.91,
-  "macro_signal": "neutral",
-  "vix_regime": "normal",
   "sector_vector": {
-    "Banking & Financial Services": 0.38,
-    "NBFCs": 0.14,
-    "Real Estate": -0.44,
-    "IT Services": -0.21,
-    "FMCG": 0.09
-  },
-  "top_positive_sectors": ["Banking & Financial Services", "NBFCs"],
-  "top_negative_sectors": ["Real Estate", "IT Services"],
-  "stakeholder_views": {
-    "producer_view": {},
-    "trader_intermediary_view": {},
-    "investor_view": {},
-    "government_fiscal_view": {},
-    "international_trade_view": {}
+    "Banks": -0.5693,
+    "Financial Services": -0.5693,
+    "NBFC": -0.5693,
+    "Automobile and Auto Components": -0.5693,
+    "Realty": -0.6188,
+    "FMCG": -0.4455,
+    "IT": 0.3465,
+    "...": 0.0
   }
 }
 ```
 
-`sector_vector` is the canonical sector-impact output. `top_positive_sectors` and `top_negative_sectors` provide compact sector exposure summaries for agent workflows.
+Negative is adverse, positive is favourable, `0.0` is no modelled impact. This tool returns only `sector_vector`; the fuller response (confidence, macro signal, top-sector summaries, stakeholder views) comes from the REST API (`POST https://api.aionanalytics.in/v1/analyze`, see the API reference) or the Python client.
 
 ## Scope
 
@@ -107,8 +96,9 @@ Indian stock market news API, NSE sector impact API, headline-to-context, RBI po
 
 ## Links
 
-- Model page: `https://dashboard.aiondashboard.site/models/indian-market-intelligence`
-- API key: `https://dashboard.aiondashboard.site/access/register`
+- Model page: `https://aionanalytics.in/models/indian-market-intelligence`
+- API key (plans, including a free plan): `https://aionanalytics.in/subscribe/indian-market-intelligence`
+- API reference: `https://aionanalytics.in/docs/api-reference.txt`
 - PyPI client: `https://pypi.org/project/aion-indian-market-intelligence/`
 
 ## Not investment advice
