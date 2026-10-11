@@ -62,33 +62,15 @@ Register: [dashboard.aiondashboard.site/access/register](https://dashboard.aiond
 }
 ```
 
-**Output (real validated — RBI decision, 5 Jun 2026):**
+**Illustrative tool output shape:**
 
 ```json
 {
-  "headline": "RBI MPC holds repo rate at 6.50% — June 2026",
-  "event": "monetary_policy",
-  "event_subtype": "repo_rate_hold",
-  "confidence": 0.91,
-  "vix_regime": "normal",
-  "sector_vector": {
-    "Banking & Financial Services": 0.38,
-    "NBFCs":                        0.14,
-    "Real Estate":                 -0.44,
-    "IT Services":                 -0.21,
-    "FMCG":                         0.09
-  },
-  "stakeholder_views": {
-    "depositors":                  "neutral — FD yields stable",
-    "home_loan_borrowers":         "relief — EMI unchanged",
-    "banks":                       "positive — CASA margins intact",
-    "equity_investors_financials": "positive — Nifty Bank +0.35% vs Nifty 50 −0.21%",
-    "equity_investors_it":         "negative — IT −0.99%"
-  }
+  "sector_vector": {"example_sector": 0.0}
 }
 ```
 
-Actual session result: Nifty Bank +0.35%, Fin Services +0.10% vs Nifty 50 −0.21% and IT −0.99%. Correct directional call for every named sector.
+This is synthetic shape-only data, not an inference result or validation claim. The MCP wrapper returns only `sector_vector`; other SDK response fields are not passed through by this tool. Hosted analysis requires an API key.
 
 ## Compatible clients
 
