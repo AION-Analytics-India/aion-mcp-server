@@ -1,6 +1,6 @@
 # aion-indian-market-intelligence-mcp
 
-mcp-name: io.github.AION-Analytics-India/aion-indian-market-intelligence
+mcp-name: io.github.AION-Analytics-India/aion-indian-market-intelligence-mcp
 
 MCP server wrapper for AION Indian Market Intelligence.
 
