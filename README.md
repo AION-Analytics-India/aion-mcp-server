@@ -8,7 +8,7 @@ Turn any Indian market headline into a signed sector-impact vector — the causa
 
 ---
 
-The `analyze_news` tool gives any MCP-compatible agent structured sector-impact context for an Indian financial headline. Classification sits inside an auditable causal structure rather than a black box: every result carries the evidence behind it, a confidence score, and impacts that are signed rather than a single sentiment number. It also reads cultural and sovereign context, which conventional models underweight.
+The `analyze_news` tool returns the `sector_vector` from the hosted API for an Indian financial headline. It provides signed sector-impact context. The fuller REST API response is documented at https://aionanalytics.in/docs/api-reference.txt. This open-source wrapper does not distribute the proprietary inference engine.
 
 Fetch Indian market data with any MCP. Understand what it means with this one.
 
@@ -74,7 +74,7 @@ This is synthetic shape-only data, not an inference result or validation claim. 
 
 ## Compatible clients
 
-Claude, ChatGPT, Gemini, Cursor, VS Code, Windsurf, Cline, and any MCP-compatible IDE or agent runtime.
+Works with MCP clients that support stdio servers. The stdio initialization and tool-discovery handshake was tested; the Claude Desktop configuration above is an example, not a certification of every client.
 
 ## Links
 

@@ -35,7 +35,7 @@ aion-indian-market-intelligence-mcp
 export AION_API_KEY="<your_api_key>"
 ```
 
-Hosted API keys are issued with a plan, including a free plan. Choose one at: `https://aionanalytics.in/subscribe/indian-market-intelligence` (the page lists the current limits).
+Hosted API keys are issued with a plan, including a free plan. Choose one at: `https://aionanalytics.in/apis` (the page lists the current limits).
 
 ## Claude Desktop
 
@@ -97,7 +97,7 @@ Indian stock market news API, NSE sector impact API, headline-to-context, RBI po
 ## Links
 
 - Model page: `https://aionanalytics.in/models/indian-market-intelligence`
-- API key (plans, including a free plan): `https://aionanalytics.in/subscribe/indian-market-intelligence`
+- API key (plans, including a free plan): `https://aionanalytics.in/apis`
 - API reference: `https://aionanalytics.in/docs/api-reference.txt`
 - PyPI client: `https://pypi.org/project/aion-indian-market-intelligence/`
 
