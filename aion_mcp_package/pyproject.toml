@@ -10,9 +10,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = "AGPL-3.0-or-later"
 license-files = ["LICENSE"]
-authors = [
-  { name = "AION Analytics", email = "info@aiondashboard.site" }
-]
+authors = [{ name = "AION Analytics", email = "contact@aionanalytics.in" }]
 dependencies = [
   "aion-indian-market-intelligence>=1.0.8",
   "mcp>=1.27,<2"
@@ -53,9 +51,12 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/AION-Analytics-India/aion-mcp-server"
-Documentation = "https://dashboard.aiondashboard.site/models/indian-market-intelligence"
-Issues = "https://github.com/AION-Analytics-India/aion-mcp-server/issues"
+"Homepage" = "https://aionanalytics.in/models/indian-market-intelligence"
+"Documentation" = "https://github.com/AION-Analytics-India/aion-mcp-server#readme"
+"Source" = "https://github.com/AION-Analytics-India/aion-mcp-server"
+"Issues" = "https://github.com/AION-Analytics-India/aion-mcp-server/issues"
+"API access" = "https://aionanalytics.in/apis"
+
 
 [project.scripts]
 aion-indian-market-intelligence-mcp = "aion_mcp.server:main"
