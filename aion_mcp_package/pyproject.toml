@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "aion-indian-market-intelligence-mcp"
-version = "1.0.5"
+version = "1.0.6"
 description = "Macro Intelligence Server (MCP) for AION IMI: turn event text into structured, explainable macro intelligence through a hosted API."
 readme = "README.md"
 requires-python = ">=3.10"
