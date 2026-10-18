@@ -33,7 +33,7 @@ aion-indian-market-intelligence-mcp
 export AION_API_KEY="<your_api_key>"
 ```
 
-Register: [dashboard.aiondashboard.site/access/register](https://dashboard.aiondashboard.site/access/register)
+Register: [aionanalytics.in/access/register](https://aionanalytics.in/access/register)
 
 ## Claude Desktop
 
@@ -78,8 +78,8 @@ Works with MCP clients that support stdio servers. The stdio initialization and 
 
 ## Links
 
-- [Website model page](https://dashboard.aiondashboard.site/models/indian-market-intelligence)
-- [API key registration](https://dashboard.aiondashboard.site/access/register)
+- [Website model page](https://aionanalytics.in/models/indian-market-intelligence)
+- [API key registration](https://aionanalytics.in/access/register)
 - [MCP PyPI package](https://pypi.org/project/aion-indian-market-intelligence-mcp/)
 - [Python client package](https://pypi.org/project/aion-indian-market-intelligence/)
 - [HuggingFace Space demo](https://huggingface.co/spaces/AION-Analytics/aion-indian-market-intelligence)
