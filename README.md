@@ -1,10 +1,14 @@
-# AION Indian Market Intelligence MCP Server
+# AION Indian Market Intelligence MCP Server — sector-impact analysis for AI agents
+
+[![MCP package on PyPI](https://img.shields.io/pypi/v/aion-indian-market-intelligence-mcp)](https://pypi.org/project/aion-indian-market-intelligence-mcp/) [![License: AGPL-3.0-or-later](https://img.shields.io/badge/license-AGPL--3.0--or--later-blue.svg)](LICENSE)
+
+**Canonical publisher:** [AION Analytics (India) GitHub organization](https://github.com/AION-Analytics-India). [Hosted API plans and free key](https://aionanalytics.in/apis) · [API specification](https://aionanalytics.in/docs/api-reference.txt) · [Source and issues](https://github.com/AION-Analytics-India/aion-mcp-server).
 
 Turn any Indian market headline into a signed sector-impact vector — the causal-context layer your LLM is missing.
 
 **AION Analytics (India) — distinct from Polymathic's AION (astronomy), Aion Analytics LLC (United States), and aion-labs (Israel).**
 
-**License: AGPL-3.0-or-later.** This MCP server (the wrapper in this repository) is open source and you can read every line of it. It calls a hosted API; the intelligence engine behind that API and the Python SDK (`aion-indian-market-intelligence`) are proprietary, and access to the API is by subscription.
+**License: AGPL-3.0-or-later.** This MCP server (the wrapper in this repository) is open source and you can read every line of it. It calls a hosted API; the intelligence engine behind that API and the Python SDK (`aion-indian-market-intelligence`) are proprietary. Inference requires an API key; a limited free API plan is offered with quotas, alongside paid subscriptions. [Current plans](https://aionanalytics.in/apis).
 
 ---
 
@@ -33,7 +37,7 @@ aion-indian-market-intelligence-mcp
 export AION_API_KEY="<your_api_key>"
 ```
 
-Register: [dashboard.aiondashboard.site/access/register](https://dashboard.aiondashboard.site/access/register)
+Obtain a model-scoped key through the [current API catalogue](https://aionanalytics.in/apis) (choose Indian Market Intelligence). Registration and passkey verification are required; the free API plan does not require a payment card. The separate `/access/register` referral route is not for hosted API key registration.
 
 ## Claude Desktop
 
@@ -76,10 +80,14 @@ This is synthetic shape-only data, not an inference result or validation claim. 
 
 Works with MCP clients that support stdio servers. The stdio initialization and tool-discovery handshake was tested; the Claude Desktop configuration above is an example, not a certification of every client.
 
+## Contributing
+
+The MCP server source is public under AGPL-3.0-or-later. To report a tool-schema, stdio-handshake or documentation defect, file a reproducible [GitHub issue](https://github.com/AION-Analytics-India/aion-mcp-server/issues) and remove keys, private headlines and personal data. Read the [contribution guidance](CONTRIBUTING.md) before sending a pull request. Changes to the wrapper do not grant access to the proprietary inference engine.
+
 ## Links
 
-- [Website model page](https://dashboard.aiondashboard.site/models/indian-market-intelligence)
-- [API key registration](https://dashboard.aiondashboard.site/access/register)
+- [Official website model page](https://aionanalytics.in/models/indian-market-intelligence)
+- [Current API catalogue and free-tier registration](https://aionanalytics.in/apis)
 - [MCP PyPI package](https://pypi.org/project/aion-indian-market-intelligence-mcp/)
 - [Python client package](https://pypi.org/project/aion-indian-market-intelligence/)
 - [HuggingFace Space demo](https://huggingface.co/spaces/AION-Analytics/aion-indian-market-intelligence)
